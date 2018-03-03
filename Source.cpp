@@ -2,7 +2,7 @@
 using namespace std;
 
 char gameArr[3][3];
-
+//create margins
 void startData() {
 	int num = 49;
 	for (int i = 2; i >= 0; i--) {
@@ -12,7 +12,7 @@ void startData() {
 		}
 	}
 }
-
+//create borders
 void printData() {
 	cout << "_______" << endl;
 	for (int i = 0; i < 3; i++) {
@@ -23,7 +23,7 @@ void printData() {
 		cout << "_______" << endl;
 	}
 }
-
+//create symbols
 void gameStep(int position, char symbol) {
 	switch (position)
 	{
@@ -58,7 +58,7 @@ void gameStep(int position, char symbol) {
 		break;
 	}
 }
-
+//create win on column
 bool horizontalCheck(char symbol) {
 	bool flag = false;
 	for (int i = 0; i < 3; i++) {
@@ -78,7 +78,7 @@ bool horizontalCheck(char symbol) {
 	}
 	return false;
 }
-
+//create win on lines
 bool verticalCheck(char symbol) {
 	bool flag = false;
 	for (int j = 0; j < 3; j++) {
